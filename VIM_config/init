@@ -1,0 +1,39 @@
+  1 " Specify a directory for plugins
+  2 call plug#begin('~/.local/share/nvim/plugged')
+  3 
+  4 " coc.nvim for autocompletion
+  5 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  6 
+  7 call plug#end()
+  8 " Map <Leader>t to open a new tab
+  9 nnoremap <Leader>t :tabnew<CR>
+ 10 
+ 11 " Map <Leader>tn to go to the next tab
+ 12 nnoremap <Leader>tn :tabnext<CR>
+ 13 
+ 14 " Map <Leader>tp to go to the previous tab
+ 15 nnoremap <Leader>tp :tabprevious<CR>
+ 16 
+ 17 " Map <Leader>tc to close the current tab
+ 18 nnoremap <Leader>tc :tabclose<CR>
+ 19 
+ 20 " Use <Tab> and <S-Tab> to navigate through popup menu
+ 21 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+ 22 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+ 23 
+ 24 " Use <CR> to confirm completion
+ 25 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+ 26 
+ 27 " Optional: Configure Coc to use language servers
+ 28 " This example shows how to configure Coc to use the Python language server
+ 29 let g:coc_global_extensions = ['coc-pyright']
+ 30 
+ 31 " Show line numbers
+ 32 set number
+ 33 
+ 34 " Status bar
+ 35 set laststatus=2
+ 36 
+ 37 " Set syntax highlighting
+ 38 syntax on
+
