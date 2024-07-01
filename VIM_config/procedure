@@ -67,7 +67,13 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Optional: Configure Coc to use language servers
 " This example shows how to configure Coc to use the Python language server
-let g:coc_global_extensions = ['coc-pyright']
+let g:coc_global_extensions = [
+  \ 'coc-pyright',
+  \ 'coc-tsserver',
+  \ 'coc-json',
+  \ 'coc-html',
+  \ 'coc-css',
+\]
 
 " Show line numbers
 set number
