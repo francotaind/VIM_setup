@@ -16,4 +16,5 @@ This repository contains my personal Neovim configuration files
 
 ## Contributing
 
+###
 Feel free to open issues or submit pull requests for improvements.
